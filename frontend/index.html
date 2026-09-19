@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LunaEnhance AI | Lunar Image Enhancement</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         SPACE BACKGROUND
+    ====================================================== -->
+
+    <div id="spaceBackground">
+
+        <div class="nebula nebula-one"></div>
+        <div class="nebula nebula-two"></div>
+
+        <div id="stars"></div>
+
+        <div class="planet planet-earth">
+            <div class="planet-glow"></div>
+            <div class="planet-surface"></div>
+        </div>
+
+        <div class="planet planet-blue">
+            <div class="planet-surface"></div>
+        </div>
+
+        <div class="planet planet-red">
+            <div class="planet-surface"></div>
+        </div>
+
+        <div class="planet planet-purple">
+            <div class="planet-surface"></div>
+        </div>
+
+        <div class="saturn">
+            <div class="saturn-body"></div>
+            <div class="saturn-ring ring-one"></div>
+            <div class="saturn-ring ring-two"></div>
+        </div>
+
+        <div id="asteroids"></div>
+
+        <div id="meteors"></div>
+
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="orbit orbit-three"></div>
+
+        <div class="moon-horizon">
+            <div class="moon-craters"></div>
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="navbar">
+
+        <div class="brand">
+            <div class="brand-moon">🌕</div>
+
+            <div class="brand-name">
+                LunaEnhance <span>AI</span>
+            </div>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#explore">Explore</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="mission-badge">
+            🚀 SIH1732
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main id="home">
+
+        <section class="hero">
+
+            <div class="hero-label">
+                CHANDRAYAAN-2
+                <span>•</span>
+                OHRC
+            </div>
+
+            <h1>
+                Reveal the Moon
+                <br>
+                <span>Beyond the Shadows.</span>
+            </h1>
+
+            <p class="hero-description">
+                AI-powered enhancement of permanently shadowed
+                lunar regions captured by Chandrayaan-2.
+            </p>
+
+
+            <!-- =================================================
+                 UPLOAD CARD
+            ================================================== -->
+
+            <div class="upload-card">
+
+                <div class="upload-orbit">
+
+                    <div class="upload-moon">
+                        🌕
+                    </div>
+
+                    <div class="orbit-dot"></div>
+
+                </div>
+
+
+                <h2>Upload Lunar Image</h2>
+
+                <p class="upload-description">
+                    Upload a low-light lunar image to enhance
+                    hidden details and improve visibility.
+                </p>
+
+
+                <!-- FILE INPUT -->
+
+                <input
+                    type="file"
+                    id="imageInput"
+                    accept="image/*"
+                    hidden
+                >
+
+
+                <div class="source-buttons">
+
+                    <label
+                        for="imageInput"
+                        class="upload-button"
+                    >
+                        📁 Choose Image
+                    </label>
+
+                    <button
+                        type="button"
+                        id="browseBtn"
+                        class="browse-button"
+                    >
+                        🔎 Browse Lunar Images
+                    </button>
+
+                </div>
+
+
+                <div id="fileName" class="file-name">
+                    No image selected
+                </div>
+
+
+                <!-- OR -->
+
+                <div class="or-divider">
+                    <span></span>
+                    <b>OR</b>
+                    <span></span>
+                </div>
+
+
+                <!-- IMAGE URL -->
+
+                <div class="web-image-tools">
+
+                    <div class="url-label">
+                        <span>🔗</span>
+                        <strong>Use an Image URL</strong>
+                    </div>
+
+                    <div class="url-box">
+
+                        <input
+                            type="url"
+                            id="imageUrl"
+                            placeholder="Paste a direct image URL (JPG, PNG, WEBP)"
+                        >
+
+                        <button
+                            type="button"
+                            id="urlButton"
+                            class="url-button"
+                        >
+                            Load Image
+                        </button>
+
+                    </div>
+
+                    <p class="web-hint">
+                        Browse the web, copy a direct image link,
+                        then paste it here.
+                    </p>
+
+                </div>
+
+
+                <!-- IMAGE PREVIEW -->
+
+                <div
+                    id="selectedPreview"
+                    class="selected-preview"
+                ></div>
+
+
+                <!-- ENHANCE -->
+
+                <button
+                    id="enhanceBtn"
+                    class="enhance-button"
+                    disabled
+                >
+                    ✨ Enhance Image
+                </button>
+
+
+                <!-- LOADING -->
+
+                <div
+                    id="loading"
+                    class="loading"
+                >
+
+                    <div class="loader-orbit">
+                        <div class="loader-moon">🌙</div>
+                    </div>
+
+                    <p>
+                        AI is enhancing your lunar image...
+                    </p>
+
+                    <small>
+                        Real-ESRGAN • GPU Accelerated
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 FEATURE STRIP
+            ================================================== -->
+
+            <div class="feature-strip">
+
+                <div class="feature">
+                    <span>🚀</span>
+                    <p>AI Powered</p>
+                </div>
+
+                <div class="feature">
+                    <span>⚡</span>
+                    <p>GPU Accelerated</p>
+                </div>
+
+                <div class="feature">
+                    <span>🌙</span>
+                    <p>Lunar Focus</p>
+                </div>
+
+                <div class="feature">
+                    <span>📊</span>
+                    <p>High Resolution</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             RESULT SECTION
+        ====================================================== -->
+
+        <section
+            id="resultSection"
+            class="result-section"
+        >
+
+            <div class="section-heading">
+                <span>AI RESULT</span>
+                <h2>Lunar Image Enhancement</h2>
+                <p>
+                    Compare the original image with the
+                    AI-enhanced result.
+                </p>
+            </div>
+
+
+            <div class="image-comparison">
+
+                <div class="image-card">
+
+                    <div class="image-card-title">
+                        Original
+                    </div>
+
+                    <div class="image-wrapper">
+
+                        <img
+                            id="originalImage"
+                            src=""
+                            alt="Original lunar image"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="comparison-arrow">
+                    →
+                </div>
+
+
+                <div class="image-card enhanced-card">
+
+                    <div class="image-card-title">
+                        ✨ AI Enhanced
+                    </div>
+
+                    <div class="image-wrapper">
+
+                        <img
+                            id="enhancedImage"
+                            src=""
+                            alt="Enhanced lunar image"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <button
+                id="downloadBtn"
+                class="download-button"
+            >
+                ⬇️ Download Enhanced Image
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FULLSCREEN VIEWER
+    ====================================================== -->
+
+    <div
+        id="imageModal"
+        class="image-modal"
+    >
+
+        <button
+            id="closeImageModal"
+            class="modal-close"
+        >
+            ×
+        </button>
+
+        <img
+            id="modalImage"
+            src=""
+            alt="Fullscreen lunar image"
+        >
+
+        <div class="modal-hint">
+            Double click to zoom • Press ESC to close
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <div>
+            Built for <strong>CODE HEIST 2026</strong>
+        </div>
+
+        <span>•</span>
+
+        <div>
+            LunaEnhance AI 🌙
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
