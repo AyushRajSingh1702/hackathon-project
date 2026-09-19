@@ -1,5 +1,3 @@
-Haan bhai 😄 PDF nahi chahiye, written text hi de raha hoon. Isko direct README.md me paste kar dena.
-
 🌙 LunaEnhance AI
 
 AI-powered Lunar Image Enhancement Platform
